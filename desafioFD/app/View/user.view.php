@@ -11,16 +11,18 @@
   </thead>
   <tbody>
     <?php
-    foreach ($users as $user):
-    ?>
-      <tr>
-        <th scope="row"><?=$user->id?></th>
-        <td><?=$user->name?></td>
-        <td><?=$user->email?></td>
-        <td><?=$user->password?></td>
-      </tr>
-    <?php
-    endforeach;
+    if (!empty($users)):
+      foreach ($users as $user):
+      ?>
+        <tr>
+          <th scope="row"><?=$user->id?></th>
+          <td><?=$user->name?></td>
+          <td><?=$user->email?></td>
+          <td><?=$user->password?></td>
+        </tr>
+      <?php
+      endforeach;
+    endif;
     ?>
   </tbody>
 </table>

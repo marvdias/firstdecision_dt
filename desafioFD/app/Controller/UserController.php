@@ -54,12 +54,13 @@ class UserController
 			$data['user'] = new \MarcusDias\FirstDecisionDT\Model\User;
 			
 			if($_SERVER['REQUEST_METHOD'] == "GET") {
-				if ($result = $data['user']->findAll()) {
+				$result = $data['user']->findAll();
+				if (!empty($result)) {
 					http_response_code(200);
 					echo json_encode(["data" => $result, "status" => "sucesso"]);
 					die(1);
 				} else {
-					throw new \Exception(implode(",", $data['user']->errors));
+					throw new \Exception("Não existe usuários cadastrados");
 				}
 			}
 

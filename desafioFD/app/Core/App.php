@@ -26,11 +26,8 @@ class App
 			$this->controller = 'MarcusDias\\FirstDecisionDT\\Controller\\'.ucfirst($url[0]).'Controller';
 			unset($url[0]);
 		} else {
-			// $filename = "../app/Controller/_404.php";
 			$this->controller = 'MarcusDias\\FirstDecisionDT\\Controller\\_404';
 		}
-		//require_once $filename;
-		// show($filename);die();
 
 		$controller = new $this->controller;
 

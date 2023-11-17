@@ -16,12 +16,12 @@ git clone https://github.com/marvdias/firstdecision_dt dt
 ```
 ## Instalar PHPUnit
 ```
-cd desafioDT
+cd desafioFD
 composer require --dev phpunit/phpunit ^6.5
 ```
 
 ## Editar configurações de BD e ROOT PATH em:
-```desafioDT/app/Core/config.php ```
+```desafioFD/app/Core/config.php ```
 
 ## Criar tabela do banco Postgres com o comando abaixo:
 ```

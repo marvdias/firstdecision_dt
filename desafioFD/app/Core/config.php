@@ -10,7 +10,7 @@ if((empty($_SERVER['SERVER_NAME']) && php_sapi_name() == 'cli') || (!empty($_SER
 	define('DBPASS', '123456');
 	define('DBDRIVER', '');
 	
-	define('ROOT', 'http://localhost/firstdecision_dt/desafioFD/public');
+	define('ROOT', 'http://localhost/dt/desafioFD/public');
 
 } else {
 	/** database config **/
